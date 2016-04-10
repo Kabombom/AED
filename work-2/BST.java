@@ -1,15 +1,14 @@
 import java.util.*;
-import java.io.*;
 
 class Node {
-    public String word;
-    public String translatedWord;
-    public int accesses;
-    public Boolean marker;
-    public Node left;
-    public Node right;
+    String word;
+    String translatedWord;
+    int accesses;
+    Boolean marker;
+    Node left;
+    Node right;
 
-    public Node(String word, String translatedWord) {
+    Node(String word, String translatedWord) {
         this.word = word;
         this.translatedWord = translatedWord;
         this.accesses = 0;
@@ -19,14 +18,14 @@ class Node {
     }
 }
 
-class BTree {
-    public Node root;
+class BSTree {
+    Node root;
 
-    public BTree() {
+    BSTree() {
         this.root = null;
     }
 
-    public void push(String word, String translatedWord) {
+    void push(String word, String translatedWord) {
         if (this.root == null) {
             this.root = new Node(word, translatedWord);
             return;
@@ -59,18 +58,18 @@ class BTree {
         System.out.println("PALAVRA JA EXISTENTE");
     }
 
-    public Node search(String word, Node node) {
+    Node search(Node node, String word) {
         if (node == null || word.equals(node.word)) {
             return node;
         }
         if (word.compareTo(node.word) < 0) {
-            return search(word, node.left);
+            return search(node.left, word);
         }
-        return search(word, node.right);
+        return search(node.right, word);
     }
 
-    public void mark(String wordToMark) {
-        Node node = search(wordToMark, this.root);
+    void mark(String wordToMark) {
+        Node node = search(this.root, wordToMark);
         if (node != null) {
             node.marker = true;
             System.out.println(wordToMark + " " + "MARCADA");
@@ -79,7 +78,7 @@ class BTree {
         System.out.println("PALAVRA NAO EXISTENTE");
     }
 
-    public void printNode(Node node) {
+    void printNode(Node node) {
         if (node == null) {
             return;
         }
@@ -88,7 +87,7 @@ class BTree {
         printNode(node.right);
     }
 
-    public void printMarkedNode(Node node) {
+    void printMarkedNode(Node node) {
         if (node == null) {
             return;
         }
@@ -99,18 +98,18 @@ class BTree {
         printMarkedNode(node.right);
     }
 
-    public void printTreeAlphabeticOrder() {
+    void printTreeAlphabeticOrder() {
         printNode(this.root);
     }
 
-    public void printMarkedTreeNodesAlphabeticOrder() {
+    void printMarkedTreeNodesAlphabeticOrder() {
         printMarkedNode(this.root);
     }
 }
 
-public class MetaA {
+public class BST {
     public static void main(String[] args) {
-        BTree tree = new BTree();
+        BSTree tree = new BSTree();
         Node aux;
         Scanner input = new Scanner(System.in);
         String strInput;
@@ -145,7 +144,7 @@ public class MetaA {
                 System.out.println("PALAVRA ACRESCENTADA");
             }
             else if (inputs[0].equals("PESQUISA")) {
-                aux = tree.search(inputs[1], tree.root);
+                aux = tree.search(tree.root, inputs[1]);
                 if (aux == null) {
                     System.out.println("PALAVRA NAO EXISTENTE");
                 }

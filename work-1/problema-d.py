@@ -7,7 +7,7 @@ def create_list_of_primes(max_prime):
     return list_of_primes
 
 
-def sundaram_sieve(list_of_primes):              
+def sundaram_sieve(list_of_primes):
     for i in range(1, len(list_of_primes)):
         j = i
         if list_of_primes[i]:
