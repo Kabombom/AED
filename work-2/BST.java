@@ -55,7 +55,7 @@ class BSTree {
                 }
             }
         }
-        System.out.println("PALAVRA JA EXISTENTE");
+        //System.out.println("PALAVRA JA EXISTENTE");
     }
 
     Node search(Node node, String word) {
@@ -115,7 +115,7 @@ public class BST {
         String strInput;
         String []inputs;
 
-        while(true) {
+        while(input.hasNextLine()) {
             strInput = input.nextLine();
             inputs = strInput.split("\\s+");
             if (strInput.trim().isEmpty()) {
@@ -129,14 +129,16 @@ public class BST {
             }
 
             if (inputs[0].equals("CARREGA")) {
-                while(true) {
+                while(input.hasNextLine()) {
                     strInput = input.nextLine();
                     inputs = strInput.split("\\s+");
                     if (inputs[0].equals("fim$dicionario")) {
                         System.out.println("DICIONARIO CARREGADO");
                         break;
                     }
-                    tree.push(inputs[0], inputs[1]);
+                    else {
+                        tree.push(inputs[0], inputs[1]);
+                    }
                 }
             }
             else if (inputs[0].equals("ACRESCENTA")) {
@@ -144,20 +146,25 @@ public class BST {
                 System.out.println("PALAVRA ACRESCENTADA");
             }
             else if (inputs[0].equals("PESQUISA")) {
+                long startTime = System.nanoTime();
                 aux = tree.search(tree.root, inputs[1]);
+                long endTime = System.nanoTime();
+                System.out.println(endTime - startTime);
                 if (aux == null) {
-                    System.out.println("PALAVRA NAO EXISTENTE");
+                    //System.out.println("PALAVRA NAO EXISTENTE");
                 }
                 else {
-                    System.out.println(aux.word + " " + aux.translatedWord);
+                    //System.out.println(aux.word + " " + aux.translatedWord);
                 }
             }
             else if (inputs[0].equals("MARCA")) {
                 tree.mark(inputs[1]);
             }
             else if (inputs[0].equals("LISTA_ALFANUM")) {
+                long startTime = System.currentTimeMillis();
                 tree.printTreeAlphabeticOrder();
-                System.out.println("FIM LISTA");
+                long endTime = System.currentTimeMillis();
+                System.out.println(endTime - startTime);
             }
             else if (inputs[0].equals("LISTA_MARCADAS")) {
                 tree.printMarkedTreeNodesAlphabeticOrder();
@@ -165,5 +172,4 @@ public class BST {
             }
         }
     }
-
 }
