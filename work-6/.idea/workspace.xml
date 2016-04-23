@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c049e215-2da2-496d-b263-b62bf98169f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../work-4/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../work-5/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../work-5/src/Main.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../work-4/out/production/work-4/BinaryHeap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../work-4/out/production/work-4/DIC10000.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../work-4/src/AVL.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../work-4/src/BinaryHeap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../work-4/src/DIC10000.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../work-4/src/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../work-4/src/Node.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../work-4/out/production/work-4/AVL.class" afterPath="$PROJECT_DIR$/../work-4/out/production/work-4/AVL.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../work-4/out/production/work-4/Main.class" afterPath="$PROJECT_DIR$/../work-4/out/production/work-4/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../work-4/out/production/work-4/Node.class" afterPath="$PROJECT_DIR$/../work-4/out/production/work-4/Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../work-2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../work-2/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../work-2/BST.java" afterPath="$PROJECT_DIR$/../work-2/BST.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../work-3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../work-3/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../work-3/MAIN.java" afterPath="$PROJECT_DIR$/../work-3/MAIN.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../work-4/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../work-4/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../work-4/src/Main.java" afterPath="$PROJECT_DIR$/../work-4/src/Main.java" />
-    </list>
+    <list default="true" id="c049e215-2da2-496d-b263-b62bf98169f6" name="Default" comment="" />
     <ignored path="work-6.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -664,12 +644,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1461435054023</updated>
-      <workItem from="1461435057748" duration="2147000" />
+      <workItem from="1461435057748" duration="2319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2147000" />
+    <option name="totallyTimeSpent" value="2319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="6" />
