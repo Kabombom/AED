@@ -5,10 +5,12 @@ public class Main {
         String strInput;
         String [] values;
         for (int i = 0; i < numberOfLines; i++) {
-            strInput = input.nextLine();
-            values = strInput.split("\\s+");
-            for (int j = 0; j < numberOfColumns; j++) {
-                matrice[i][j] = Integer.parseInt(values[j]);
+            if (input.hasNext()) {
+                strInput = input.nextLine();
+                values = strInput.split("\\s+");
+                for (int j = 0; j < numberOfColumns; j++) {
+                    matrice[i][j] = Integer.parseInt(values[j]);
+                }
             }
         }
     }
@@ -67,8 +69,9 @@ public class Main {
         numberOfColumns = Integer.parseInt(sizes[1]);
         int[][] matrice = new int[numberOfLines][numberOfColumns];
         fillMatrice(input, matrice, numberOfLines, numberOfColumns);
+        long timeStart = System.nanoTime();
         insertionSort(matrice, numberOfLines, numberOfColumns);
-        printMatrice(matrice, numberOfLines, numberOfColumns);
+        long timeEnd = System.nanoTime();
+        System.out.println(timeEnd - timeStart);
     }
-
 }
